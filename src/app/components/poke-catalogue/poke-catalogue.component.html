@@ -1,0 +1,20 @@
+<div class="search">
+    <h3>Pokemon search:</h3>
+    <input type="text" class="searchPokemons" (keyup)="searchPokemons()" [(ngModel)]="searchText">
+</div>
+
+<mat-card-title-group>
+    <mat-card class='{{pokemon.type[0].type.name}}' *ngFor="let pokemon of pokemons" (click)="getPokemonInfo(pokemon)">
+        <mat-card-content>
+            <img class="pokemon" src="{{pokemon.image}}" alt="" srcset="" width="100px">
+            <img class="poke" src="../../../assets/images/pokeIcon.png" alt="" srcset="" width="100px">
+        </mat-card-content>
+        <mat-card-title>
+            <h3>#{{pokemon.id}}</h3>
+            <h1>{{pokemon.name}}</h1>
+            <mat-card-subtitle>
+                <h2>type: {{pokemon.type[0].type.name}} </h2>
+            </mat-card-subtitle>
+        </mat-card-title>
+    </mat-card>
+</mat-card-title-group>

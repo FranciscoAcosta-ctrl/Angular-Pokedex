@@ -1,0 +1,258 @@
+.btn {
+    background: #333;
+    position: absolute;
+    z-index: 50;
+    top: 62px;
+    margin-left: 0px;
+    width: 100px;
+    height: 50px;
+    border-radius: 0 0 48px;
+    margin-top: 0px;
+
+    cursor: pointer;
+
+    transition: all 800ms;
+    .material-icons {
+        margin: 10px 30px;
+        font-size: 30px;
+        transition: all 300ms;
+        color: white;
+    }
+}
+.btn:hover {
+    box-shadow: 10px 10px 50px #6e6e6e, -25px -25px 50px #ffffff;
+    .material-icons:hover{
+        transform: scale(1.2);
+    }
+}
+
+.contentAbout{
+    display: block;
+    width: 100%;
+    height: 320px;
+    .circleFoto{
+        display: block;
+        width: 250px;
+        height: 250px;
+        margin: 50px auto;
+        padding: 0;
+        border: 5px solid #333;
+        border-radius: 50%;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+    .yellowText{
+        width: 96%;
+        height: 400px;
+        margin: 20px auto;
+        display: block;
+        border: 5px solid #FFE100;
+       
+        .titleAbout{
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 0px;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .textAbout{
+            text-align: center;
+            margin-top: 15px;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 24px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .listAbout1{
+            display: block;
+            position: relative;
+            text-align: left;
+            margin: 10px 20%;
+            padding: 0px;
+            list-style: none;
+            font-size: 10px;
+            float: left;
+            width: 200px;
+            li{
+            width: 200px;
+            line-height: 12px;
+            margin-top: 10px;
+            float: left;
+            img{
+                width: 32px;
+            }
+            a{
+                text-decoration: none;
+                margin-bottom: 10px;
+                margin-left: 5px;
+                
+            }
+            
+        }
+    }
+       
+    }
+}
+
+@media (min-width: 500px) and (max-width: 719px) {
+    .contentAbout{
+        height: 100px !important;
+        .circleFoto{
+            display: block;
+            width: 250px;
+            height: 250px;
+            margin: 70px auto;
+            margin-bottom: 0;
+        }
+        .yellowText{
+            width: 90%;
+            height: 400px;
+            .titleAbout{
+                margin-top: 20px;
+                font-size: 40px;
+            }
+            .textAbout{
+                margin-left: 15px;
+                margin-right: 15px;
+                font-size: 24px;
+            }
+            .listAbout1{
+                
+                width: 400px;
+                margin: 10px 20% !important;
+                margin-left: 5px;
+                font-size: 14px;
+                a{
+                    float: left;
+                }
+            }
+        }
+    }
+}
+/*landscape*/
+@media (min-width: 720px) and (max-width: 1199px) {
+   .contentAbout{
+       height: auto;
+       display: grid;
+       grid-template-columns: 20% 20% 20% 20% 20%;
+       grid-template-areas: 
+       "a a b b b"
+       "a a b b b";
+       .circleFoto{
+           grid-area: a;
+           display: flex;
+           justify-self: center;
+           align-self: center;
+       }
+       .yellowText{
+           margin-top: 70px;
+           margin-bottom: 70px;
+           position:relative;
+           grid-area: b;
+           width: 90%;
+           height: auto;
+           .titleAbout{
+                margin-top: 20px;
+                font-size: 45px;
+            }
+            .textAbout{
+                margin-left: 15px;
+                margin-right: 15px;
+                font-size: 18px;
+            }
+            .listAbout1{
+                margin-left: 65px;
+                font-size: 16px;
+            }
+    
+        
+       }
+   }
+}
+/*Escritorio*/
+@media (min-width: 1200px) and (max-width: 1499px){
+    .contentAbout{
+        height: auto;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-areas: 
+        "a a b b b"
+        "a a b b b";
+        .circleFoto{
+            width: 350px;
+            height: 350px;
+            grid-area: a;
+            display: flex;
+            justify-self: center;
+            align-self: center;
+        }
+        .yellowText{
+            margin-top: 70px;
+            margin-bottom: 70px;
+            position:relative;
+            grid-area: b;
+            width: 90%;
+            height: auto;
+            .titleAbout{
+                 margin-top: 20px;
+                 font-size: 55px;
+             }
+             .textAbout{
+                 margin-left: 15px;
+                 margin-right: 15px;
+                 font-size: 20px;
+             }
+             .listAbout1{
+                 margin-left: 100px;
+                 font-size: 18px;
+             }
+             
+        }
+    }
+}
+/*Escritorio Grandes*/
+@media (min-width: 1500px) {
+    .contentAbout{
+        width: 80%;
+        margin-left: 10%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-areas: 
+        "a a b b b"
+        "a a b b b";
+        .circleFoto{
+            width: 350px;
+            height: 350px;
+            grid-area: a;
+            display: flex;
+            justify-self: center;
+            align-self: center;
+        }
+        .yellowText{
+            margin-top: 70px;
+            margin-bottom: 70px;
+            position:relative;
+            grid-area: b;
+            width: 90%;
+            height: auto;
+            .titleAbout{
+                 margin-top: 20px;
+                 font-size: 50px;
+             }
+             .textAbout{
+                 margin-left: 15px;
+                 margin-right: 15px;
+                 font-size: 22px;
+             }
+             .listAbout1{
+                 margin-left: 100px;
+                 font-size: 20px;
+             }
+            
+        }
+    }
+}

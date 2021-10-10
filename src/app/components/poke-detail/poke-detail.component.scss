@@ -1,0 +1,168 @@
+@import "../../../assets/styles/variables.scss";
+.btn {
+    position: absolute;
+    z-index: 50;
+    top: 62px;
+    margin-left: 0px;
+    width: 100px;
+    height: 50px;
+    border-radius: 0 0 48px;
+    margin-top: 0px;
+
+    cursor: pointer;
+
+    transition: all 800ms;
+    .material-icons {
+        margin: 10px 30px;
+        font-size: 30px;
+        transition: all 300ms;
+    }
+}
+.btn:hover {
+    box-shadow: 10px 10px 50px #6e6e6e, -25px -25px 50px #ffffff;
+    .material-icons:hover{
+        transform: scale(1.2);
+    }
+}
+
+.carta {
+    width: 600px;
+    height: 632px;
+    display: grid;
+    grid-template-columns: 150px 300px 150px;
+    grid-template-rows: 30px 230px 400px;
+    border-radius: 48px;
+
+    border: #000 solid 3px;
+    margin: 30px auto;
+    img {
+        position: absolute;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        width: 250px;
+        margin: 20px auto;
+    }
+    .titleGroup {
+        margin-top: 20px;
+        position: absolute;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        display: inline-flex;
+        mat-card-title {
+            .titleId {
+                color: rgb(151, 146, 146);
+                font-size: 28px;
+            }
+            .titleName {
+                text-transform: uppercase;
+                font-size: 32px;
+                margin-right: 30px;
+            }
+        }
+        mat-card-subtitle {
+            margin-top: 5px;
+            width: 50px;
+            height: 22px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-right: 5px;
+            text-align: center;
+            border: rgb(97, 97, 97) solid 1px;
+            border-radius: 48px;
+            float: left;
+        }
+    }
+
+    mat-card-content {
+        display: block;
+        position: relative;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        margin-top: 20px;
+        justify-self: center;
+        background-color: #ffffff;
+        padding: 20px 0px;
+        width: 632px;
+        height: 328px;
+        border-radius: 48px 48px 48px 48px;
+
+        .stats {
+            font-size: 20px;
+            margin-left: 215px;
+            .name {
+                color: rgb(119, 119, 119);
+                margin-right: 10px;
+            }
+            .stat {
+                color: #000;
+            }
+            .progress-bar {
+                background-color: #ffffff;
+                height: 15px;
+                padding: 5px;
+                width: 200px;
+                margin: 5px 0;
+                border-radius: 5px;
+                box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+
+                span {
+                    display: inline-block;
+                    height: 100%;
+                    border-radius: 3px;
+                    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+                    transition: width 0.4s ease-in-out;
+                    background-color: rgb(3, 255, 188);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .btn {
+        top: 55px;
+    }
+    .carta {
+        width: 300px;
+        height: 632px;
+        grid-template-columns: 50px 200px 50px;
+        grid-template-rows: 30px 230px 400px;
+
+        border: #000 solid 3px;
+        margin: 50px auto;
+        img {
+            width: 230px;
+            margin: 30px auto;
+        }
+        .titleGroup {
+            mat-card-title {
+                .titleId {
+                    color: rgb(151, 146, 146);
+                    font-size: 18px;
+                }
+                .titleName {
+                    text-transform: uppercase;
+                    font-size: 22px;
+                    margin-right: 5px;
+                }
+            }
+            mat-card-subtitle {
+            }
+        }
+
+        mat-card-content {
+            padding: 10px 0px;
+            width: 330px;
+            height: 350px;
+            border-radius: 48px 48px 48px 48px;
+
+            .stats {
+                font-size: 20px;
+                margin-left: 50px;
+            }
+        }
+    }
+}

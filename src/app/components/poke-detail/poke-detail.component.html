@@ -1,0 +1,32 @@
+<div class="btn {{pokemon.types[0].type.name}}" (click)="home()">
+  <span class="material-icons">
+    arrow_back
+  </span>
+</div>
+<mat-card class="{{pokemon.types[0].type.name}} carta ">
+  <img mat-card-xl-image src="{{pokemonImg}}">
+
+  <mat-card-title-group class="titleGroup">
+    <mat-card-title>
+      <label class="titleName">{{pokemon.name}}</label>
+      <label class="titleId"> #{{pokemon.id}}</label>
+    </mat-card-title>
+
+
+
+    <mat-card-subtitle class="{{type.type.name}}" *ngFor="let type of pokemon.types">{{type.type.name}}
+    </mat-card-subtitle>
+
+  </mat-card-title-group>
+  <mat-card-content>
+    <div class="stats" *ngFor="let stat of pokemon.stats">
+      <label class="name">{{stat.stat.name}}</label>
+      <span class="stat">{{stat.base_stat}}</span>
+      <div class="progress-bar blue">
+        <span style="width: {{stat.base_stat}}px "></span>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>
+
